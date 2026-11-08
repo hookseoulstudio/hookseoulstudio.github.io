@@ -4,24 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>뭐먹? 개인정보처리방침</title>
-  <style>
-    :root { color-scheme: light; --ink:#25302a; --muted:#66736b; --line:#dfe7e1; --accent:#1f6b36; --paper:#fff; --bg:#f5f8f5; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif; line-height:1.75; }
-    main { max-width:760px; margin:0 auto; padding:56px 22px 72px; }
-    article { background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:40px clamp(24px,6vw,56px); box-shadow:0 8px 30px rgba(31,63,42,.06); }
-    h1 { margin:0 0 8px; font-size:clamp(28px,5vw,40px); letter-spacing:-.04em; }
-    h2 { margin:36px 0 10px; font-size:20px; letter-spacing:-.02em; }
-    p { margin:10px 0; }
-    ul { padding-left:22px; }
-    .meta { margin:0 0 30px; color:var(--muted); font-size:14px; }
-    .notice { margin:22px 0; padding:16px 18px; border-left:4px solid var(--accent); background:#f0f7f1; border-radius:8px; }
-    a { color:var(--accent); }
-    footer { margin-top:26px; color:var(--muted); font-size:14px; }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-  <main>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">H</span>Hookseoul Studio</a>
+      <nav aria-label="주 메뉴"><a href="/#apps">앱 목록</a></nav>
+    </div>
+  </header>
+  <main class="legal shell">
+    <a class="back" href="/">← Hookseoul Studio</a>
     <article>
       <h1>뭐먹? 개인정보처리방침</h1>
       <p class="meta">시행일: 2026년 9월 7일</p>
@@ -60,5 +53,11 @@
       <footer>본 방침은 앱의 실제 기능 및 사용 중인 SDK의 데이터 처리 방식에 따라 변경될 수 있습니다.</footer>
     </article>
   </main>
+  <footer class="site-footer">
+    <div class="shell">
+      <span>© 2026 Hookseoul Studio</span>
+      <a href="mailto:hookseoul109@gmail.com">hookseoul109@gmail.com</a>
+    </div>
+  </footer>
 </body>
 </html>

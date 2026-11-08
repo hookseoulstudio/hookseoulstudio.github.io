@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+ <rect width="1024" height="1024" fill="#4F46E5"/>
+ <g transform="translate(512 512) scale(0.92) translate(-512 -512)">
+  <!-- swap part: crown cap with curved valleys (queen) -->
+  <path fill="#FFFFFF" d="M282 270 Q414 480 512 170 Q610 480 742 270 V428 H282 Z"/>
+  <circle fill="#FFFFFF" cx="282" cy="254" r="40"/>
+  <circle fill="#FFFFFF" cx="742" cy="254" r="40"/>
+  <circle fill="#FFC65C" cx="512" cy="150" r="44"/>
+  <!-- family part: bookmark body with a V notch -->
+  <path fill="#FFFFFF" d="M282 484 H742 V856 L512 706 L282 856 Z"/>
+ </g>
+</svg>
