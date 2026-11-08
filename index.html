@@ -4,49 +4,77 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Hookseoul Studio 앱 정보와 개인정보처리방침">
+  <meta name="theme-color" content="#f7f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161514" media="(prefers-color-scheme: dark)">
   <title>Hookseoul Studio · 앱 정보</title>
-  <style>
-    :root { color-scheme: dark; --bg: #181a1b; --panel: #242728; --text: #f4f1e8; --muted: #bcbdb7; --accent: #e4ca83; --line: #414443; }
-    * { box-sizing: border-box; }
-    body { min-height: 100vh; margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; line-height: 1.65; }
-    main { max-width: 800px; margin: 0 auto; padding: clamp(48px, 10vw, 100px) 22px 72px; }
-    .eyebrow { margin: 0 0 12px; color: var(--accent); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-    h1 { margin: 0; font-size: clamp(32px, 6vw, 52px); line-height: 1.15; letter-spacing: -.04em; }
-    .lead { margin: 18px 0 36px; color: var(--muted); font-size: 17px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
-    .card { display: block; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
-    .card:hover, .card:focus-visible { border-color: var(--accent); transform: translateY(-2px); outline: none; }
-    .card h2 { margin: 0 0 8px; font-size: 22px; }
-    .card p { margin: 0; color: var(--muted); }
-    .card span { display: inline-block; margin-top: 20px; color: var(--accent); font-weight: 700; }
-    footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
-    footer a { color: var(--accent); }
-    @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-  <main>
-    <p class="eyebrow">Hookseoul Studio</p>
-    <h1>작은 선택을 더 즐겁게.</h1>
-    <p class="lead">Hookseoul Studio의 앱과 개인정보처리방침을 확인할 수 있습니다.</p>
-    <div class="grid">
-      <a class="card" href="/eodige-privacy-policy.html">
-        <h2>어디게</h2>
-        <p>국기와 지도로 나라를 알아가는 퀴즈 게임</p>
-        <span>개인정보처리방침 보기 →</span>
-      </a>
-      <a class="card" href="/privacy-policy.html">
-        <h2>뭐먹?</h2>
-        <p>오늘 먹을 음식을 고르는 앱</p>
-        <span>개인정보처리방침 보기 →</span>
-      </a>
-      <a class="card" href="/vocaqueen-privacy-policy.html">
-        <h2>VocaQueen</h2>
-        <p>CEFR 레벨별로 영어 단어를 익히는 학습 앱</p>
-        <span>개인정보처리방침 보기 →</span>
-      </a>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">H</span>Hookseoul Studio</a>
+      <nav aria-label="주 메뉴"><a href="#apps">앱</a></nav>
     </div>
-    <footer>문의: <a href="mailto:hookseoul109@gmail.com">hookseoul109@gmail.com</a></footer>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <p class="eyebrow">Hookseoul Studio</p>
+      <h1>작은 선택을<br><em>더 즐겁게.</em></h1>
+      <p>오늘 먹을 메뉴, 오늘 외울 단어, 처음 보는 나라의 국기. 일상의 작은 순간을 위한 Android 앱을 만듭니다.</p>
+    </section>
+
+    <section class="apps shell" id="apps" aria-labelledby="apps-title">
+      <div class="section-head">
+        <h2 id="apps-title">앱</h2>
+        <span>개인정보처리방침과 문의</span>
+      </div>
+      <ul class="app-list">
+        <li class="app">
+          <div class="app-top">
+            <img class="app-icon" src="/assets/icons/vocaqueen.svg" width="64" height="64" alt="">
+            <div><h3>VocaQueen</h3><span class="kind">Android · 영어 단어</span></div>
+          </div>
+          <p>레벨 테스트로 내 수준을 찾고, 하루 분량씩 익히고, 잊을 때쯤 다시 복습하는 영어 단어 앱</p>
+          <div class="app-links">
+            <a class="pill" href="/vocaqueen-privacy-policy.html">개인정보처리방침</a>
+          </div>
+        </li>
+        <li class="app">
+          <div class="app-top">
+            <img class="app-icon" src="/assets/icons/mwo-meok.png" width="64" height="64" alt="">
+            <div><h3>뭐먹?</h3><span class="kind">Android · 메뉴 추천</span></div>
+          </div>
+          <p>점심과 저녁 메뉴를 추천받고, 고른 한 끼를 기록하는 앱</p>
+          <div class="app-links">
+            <a class="pill primary" href="https://play.google.com/store/apps/details?id=com.mwomeok.app">Google Play</a>
+            <a class="pill" href="/privacy-policy.html">개인정보처리방침</a>
+          </div>
+        </li>
+        <li class="app">
+          <div class="app-top">
+            <img class="app-icon" src="/assets/icons/eodige.png" width="64" height="64" alt="">
+            <div><h3>어디게</h3><span class="kind">Android · 퀴즈 게임</span></div>
+          </div>
+          <p>국기와 지도로 나라를 맞히며 세계를 알아가는 퀴즈 게임</p>
+          <div class="app-links">
+            <a class="pill" href="/eodige-privacy-policy.html">개인정보처리방침</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="contact">
+        <div><strong>문의</strong><span>앱 사용, 개인정보, 데이터 삭제에 관한 문의를 받습니다.</span></div>
+        <a class="pill primary" href="mailto:hookseoul109@gmail.com">hookseoul109@gmail.com</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <span>© 2026 Hookseoul Studio</span>
+      <a href="mailto:hookseoul109@gmail.com">hookseoul109@gmail.com</a>
+    </div>
+  </footer>
 </body>
 </html>

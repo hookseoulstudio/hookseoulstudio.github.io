@@ -1,0 +1,97 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f7f5f1;
+  --paper: #ffffff;
+  --ink: #1f1d1b;
+  --muted: #6c6762;
+  --line: #e6e1da;
+  --accent: #c2502f;
+  --accent-ink: #ffffff;
+  --soft: #fbefe8;
+  --shadow: 0 1px 2px rgb(40 30 20 / 4%), 0 12px 32px rgb(40 30 20 / 6%);
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161514;
+    --paper: #201f1d;
+    --ink: #f3efe9;
+    --muted: #aaa39b;
+    --line: #34312e;
+    --accent: #ee8a63;
+    --accent-ink: #1b1411;
+    --soft: #2b211c;
+    --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 12px 32px rgb(0 0 0 / 25%);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: var(--bg); color: var(--ink); line-height: 1.7; word-break: keep-all; overflow-wrap: anywhere; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+code { font-size: .92em; padding: 1px 6px; border-radius: 6px; background: var(--soft); overflow-wrap: anywhere; }
+
+.shell { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+/* Header and footer */
+.site-header { border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 2; }
+.site-header .shell { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 800; letter-spacing: -.03em; text-decoration: none; }
+.brand-mark { width: 26px; height: 26px; border-radius: 8px; background: var(--accent); display: grid; place-items: center; color: var(--accent-ink); font-size: 14px; font-weight: 900; }
+.brand small { font-weight: 500; color: var(--muted); }
+.site-header nav a { color: var(--muted); font-size: 14px; font-weight: 650; text-decoration: none; }
+.site-header nav a:hover { color: var(--accent); }
+.site-footer { margin-top: auto; border-top: 1px solid var(--line); }
+.site-footer .shell { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; padding-top: 26px; padding-bottom: 32px; color: var(--muted); font-size: 14px; }
+.site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--accent); }
+
+/* Home */
+.hero { padding-top: clamp(64px, 12vw, 128px); padding-bottom: clamp(64px, 8vw, 80px); }
+.eyebrow { margin: 0 0 16px; color: var(--accent); font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.hero h1 { margin: 0; font-size: clamp(40px, 7.5vw, 76px); line-height: 1.12; letter-spacing: -.06em; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero p { max-width: 540px; margin: 22px 0 0; color: var(--muted); font-size: clamp(16px, 2.2vw, 19px); }
+
+.apps { padding-bottom: clamp(64px, 10vw, 112px); }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.section-head h2 { margin: 0; font-size: 24px; letter-spacing: -.04em; }
+.section-head span { color: var(--muted); font-size: 14px; }
+.app-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.app { display: flex; flex-direction: column; gap: 18px; padding: 26px; border: 1px solid var(--line); border-radius: 24px; background: var(--paper); box-shadow: var(--shadow); }
+.app-top { display: flex; align-items: center; gap: 16px; }
+.app-icon { flex: none; width: 64px; height: 64px; border-radius: 16px; box-shadow: 0 4px 14px rgb(0 0 0 / 14%); }
+.app h3 { margin: 0; font-size: 22px; letter-spacing: -.04em; line-height: 1.3; }
+.app .kind { color: var(--muted); font-size: 13px; font-weight: 600; }
+.app p { margin: 0; color: var(--muted); font-size: 15px; }
+.app-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.pill { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); font-size: 14px; font-weight: 650; text-decoration: none; transition: border-color .15s, background .15s; }
+.pill:hover { border-color: var(--accent); background: var(--soft); }
+.pill.primary { border-color: var(--accent); background: var(--accent); color: var(--accent-ink); }
+.pill.primary:hover { filter: brightness(1.06); }
+
+.contact { margin-top: 18px; padding: 26px; border-radius: 24px; background: var(--soft); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; }
+.contact strong { display: block; font-size: 18px; letter-spacing: -.03em; }
+.contact span { color: var(--muted); font-size: 14px; }
+
+/* Policy pages: the article markup inside stays as it was */
+.legal { padding-top: clamp(28px, 6vw, 56px); padding-bottom: clamp(56px, 9vw, 96px); }
+.legal .back { display: inline-flex; margin-bottom: 18px; color: var(--muted); font-size: 14px; font-weight: 650; text-decoration: none; }
+.legal .back:hover { color: var(--accent); }
+.legal article { max-width: 780px; padding: clamp(24px, 6vw, 56px); border: 1px solid var(--line); border-radius: 24px; background: var(--paper); box-shadow: var(--shadow); line-height: 1.8; }
+.legal h1 { margin: 0 0 8px; font-size: clamp(28px, 5vw, 40px); line-height: 1.3; letter-spacing: -.05em; }
+.legal h2 { margin: 40px 0 10px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 19px; letter-spacing: -.03em; }
+.legal p { margin: 10px 0; }
+.legal ul, .legal ol { padding-left: 22px; }
+.legal li + li { margin-top: 6px; }
+.legal .meta { margin: 0 0 28px; color: var(--muted); font-size: 14px; }
+.legal .notice { margin: 22px 0; padding: 16px 18px; border-left: 4px solid var(--accent); border-radius: 10px; background: var(--soft); }
+.legal article footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+
+@media (max-width: 520px) {
+  .shell { padding: 0 16px; }
+  .app { padding: 22px; }
+  .brand small { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .pill { transition: none; } }
